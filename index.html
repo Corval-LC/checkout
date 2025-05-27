@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finaliza tu compra</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #fff;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .form-card,
+    .summary-card,
+    .step-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .form-card {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+    }
+
+    .summary-card {
+      min-width: 280px;
+      flex: 1;
+      max-width: 400px;
+    }
+
+    .step-card {
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .input-row > div {
+      flex: 1;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .checkbox-container input {
+      margin-right: 10px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #69df75;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      box-shadow: 0 4px 0 #57c363;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Finaliza tu compra</h1>
+  <div class="container">
+    <!-- Formulario -->
+    <div class="form-card">
+      <h3>Datos personales</h3>
+      <label for="correo">Correo</label>
+      <input type="email" id="correo" name="correo">
+
+      <div class="input-row">
+        <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre">
+        </div>
+        <div>
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido">
+        </div>
+      </div>
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono">
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Quiero recibir el newsletter con promociones.</label>
+      </div>
+
+      <button class="btn">Continuar</button>
+    </div>
+
+    <!-- Resumen de la compra -->
+    <div class="summary-card">
+      <strong>Resumen de la compra</strong>
+      <!-- Aquí podrías insertar dinámicamente el resumen del carrito -->
+    </div>
+
+    <!-- Envío -->
+    <div class="step-card">Envío</div>
+
+    <!-- Pago -->
+    <div class="step-card">Pago</div>
+  </div>
+</body>
+</html>
